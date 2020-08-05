@@ -4,7 +4,7 @@ let check_status = window.setInterval(function() {
     type: "GET",
     url: "/2fa/check",
     success: function(r) {
-      if (r === "accepted" || r === "rejected" || r === "invalid request") {
+      if (r !== "sent") {
         Rails.ajax({
           type: "PATCH",
           url: "/2fa/finalize",

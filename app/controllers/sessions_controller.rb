@@ -38,9 +38,9 @@ class SessionsController < ApplicationController
       session[:pushauth_id] = nil
       session[:pre_2fa_user_id] = nil
       flash.notice = "Successfully logged in!"
-    when "rejected"
+    when "rejected", "expired", "canceled", "error"
       session[:pre_2fa_user_id] = nil
-      flash.alert = "Your request was denied."
+      flash.alert = "Something went wrong with your request."
     end
   end
 

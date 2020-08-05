@@ -46,13 +46,13 @@ $ bundle exec rails console
 > exit
 ```
 
-Note that the username should match the username you enter in the corresponding app.
+Note that the username should match the username you enter in the corresponding mobile app.
 
 Next, run `rails credentials:edit` and enter your UnifyID PushAuth API key in the following format:
 
 ```
 unifyid:
-  server_api_key: YourKeyGoesHere
+  server_api_key: <your_key_goes_here>
 ```
 
 Finally, fire up the dev server!
